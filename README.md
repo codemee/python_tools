@@ -23,6 +23,7 @@ Program output 7 bytes:
 BIG5 output:hello
 
 UTF-8 output:hello
+
 ❯ python .\print_output.py python -c "print('測試')"
 Prefered encoding:cp950
 Program output 6 bytes:
@@ -30,4 +31,12 @@ B4 FA B8 D5 0D 0A
 BIG5 output:測試
 
 UTF-8 output err:invalid start byte
+
+❯ python .\print_output.py python -X utf8 -c "print('測試')"
+Prefered encoding:cp950
+Program output 8 bytes:
+E6 B8 AC E8 A9 A6 0D 0A
+BIG5 output:皜祈岫
+
+UTF-8 output:測試
 ```
